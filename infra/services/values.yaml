@@ -1,0 +1,27 @@
+global: 
+  replicaCount: 1
+  environment: {}
+  environmentRef: 
+    APPLICATION_ID: metadata.name
+
+application:
+  enabled: false
+  image:
+    repository: com.ecosystem.application
+    tag: latest
+
+authentication:
+  enabled: false
+  image:
+    repository: com.ecosystem.authentication
+    tag: latest
+
+ingress:
+  enabled: false
+#   paths:
+#     - name: api-admin
+#       path: /api-admin/?(.*)
+#       servicePort: 3000
+#     - name: service-datasource
+#       path: /service-datasource/?(.*)
+#       servicePort: 4000

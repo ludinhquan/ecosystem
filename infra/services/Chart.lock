@@ -1,0 +1,12 @@
+dependencies:
+- name: common
+  repository: https://charts.bitnami.com/bitnami
+  version: 1.13.0
+- name: application
+  repository: file://charts/application
+  version: 0.1.0
+- name: authentication
+  repository: file://charts/authentication
+  version: 0.1.0
+digest: sha256:ccebf2904546f0d9d288cec32f6a66384cab46fbd295958b6ee88055caa6cab9
+generated: "2023-05-11T16:02:44.364827641+07:00"
