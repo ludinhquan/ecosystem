@@ -9,4 +9,4 @@ dependencies:
   repository: file://charts/authentication
   version: 0.1.0
 digest: sha256:ccebf2904546f0d9d288cec32f6a66384cab46fbd295958b6ee88055caa6cab9
-generated: "2023-05-11T16:02:44.364827641+07:00"
+generated: "2023-05-12T13:39:02.085853605+07:00"

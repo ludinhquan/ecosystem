@@ -28,7 +28,7 @@ spec:
     spec:
       containers:
         - name: {{ .Chart.Name }}
-          image: {{include "common.image.prefix" .}}/{{ .Values.image.repository }}:{{ .Values.image.tag }}
+          image: {{ .Values.global.image.prefix }}/{{ .Values.image.repository }}:{{ .Values.image.tag }}
           imagePullPolicy: {{ .Values.image.pullPolicy | default "Never"}}
           {{- if .Values.command }}
           command: {{ .Values.command }}
@@ -44,13 +44,13 @@ spec:
               protocol: {{ .protocol | default "TCP" }}
             {{- end }}
             {{- end }}
-          {{- if (merge .Values.global.environment (.Values.environment | default )) }}
+          {{- if (merge (.Values.global.env|default) (.Values.env | default )) }}
           env:
-          {{- range $name, $value := merge .Values.global.environment .Values.environment}}
+          {{- range $name, $value := merge (.Values.global.env|default) (.Values.env | default)}}
           - name: {{ $name | quote}}
             value: {{ $value | quote }}
           {{- end }}
-          {{- range $name, $value := merge .Values.global.environmentRef .Values.environmentRef}}
+          {{- range $name, $value := merge (.Values.global.envRef|default) (.Values.envRef | default)}}
           - name: {{ $name | quote}}
             valueFrom:
               fieldRef:

@@ -1,6 +1,0 @@
-services:
-  - type: ClusterIP
-    specs:
-      - name: datasource
-        port: 6000
-        targetPort: 6000

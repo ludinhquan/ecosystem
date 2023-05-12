@@ -1,10 +1,10 @@
 
 {{- define "common.image.prefix" -}}
-{{ default "com.ecosystem" }}
+{{ default "com.ecosystem.iot" }}
 {{- end -}}
 
 {{- define "common.service.prefix" -}}
-{{ default "ecosystem" }}
+{{ default "api" }}
 {{- end -}}
 
 {{- define "common.hosts.default" -}}
